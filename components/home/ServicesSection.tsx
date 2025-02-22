@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const services = [
   {
@@ -90,10 +91,13 @@ export function ServicesSection() {
         </div>
       </div>
       <div className="text-center mt-12">
-        <button className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center font-semibold">
+        <Link
+          href="/services"
+          className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center font-semibold"
+        >
           View All Services
           <ArrowRight className="w-5 h-5 ml-2" />
-        </button>
+        </Link>
       </div>
     </section>
   );
