@@ -51,7 +51,7 @@
 // //////////////////////////////////////////////////
 "use client";
 import { brands } from "@/public/data/data";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
 export function BrandsSection() {
   return (
@@ -92,6 +92,12 @@ export function BrandsSection() {
               </div>
             </Link>
           ))}
+        </div>
+        <div className="text-center mt-12">
+          <button className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center font-semibold">
+            View All Brands
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </button>
         </div>
       </div>
     </section>
