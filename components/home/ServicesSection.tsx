@@ -74,30 +74,11 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold gradient-text mb-4">
-            Popular Repair Services
-          </h2>
-          <p className="text-xl text-gray-600">
-            Professional repairs for all your devices
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <ServiceCard key={index} {...service} />
-          ))}
-        </div>
-      </div>
-      <div className="text-center mt-12">
-        <Link
-          href="/services"
-          className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center font-semibold"
-        >
-          View All Services
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
+    <section className="w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service, index) => (
+          <ServiceCard key={index} {...service} />
+        ))}
       </div>
     </section>
   );
@@ -135,7 +116,7 @@ function ServiceCard({
         </div>
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
-        <div className="flex justify-between items-center">
+        {/* <div className="flex justify-between items-center">
           <div>
             <span className="text-sm text-gray-500">From</span>
             <span className="text-2xl font-bold text-blue-600 ml-1">
@@ -146,8 +127,8 @@ function ServiceCard({
             <Clock className="h-4 w-4 mr-1" />
             <span>{time}</span>
           </div>
-        </div>
-        <Button className="w-full mt-4 cta-button">
+        </div> */}
+        <Button className="w-full mt-2 cta-button">
           Book Now
           <ChevronRight className="h-4 w-4 ml-2" />
         </Button>

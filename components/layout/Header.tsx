@@ -207,12 +207,30 @@ export default function Header() {
                   </div>
                 </div>
 
-                <a href="#guides" className="text-gray-600 hover:text-blue-600">
-                  Repair Guides
-                </a>
-                <a href="#blog" className="text-gray-600 hover:text-blue-600">
-                  Blog
-                </a>
+                <Link
+                  href="/service"
+                  className="text-gray-600 hover:text-blue-600"
+                >
+                  Services
+                </Link>
+                <Link
+                  href="/brands"
+                  className="text-gray-600 hover:text-blue-600"
+                >
+                  Brands
+                </Link>
+                <Link
+                  href="/about"
+                  className="text-gray-600 hover:text-blue-600"
+                >
+                  About us
+                </Link>
+                <Link
+                  href="/brands"
+                  className="text-gray-600 hover:text-blue-600"
+                >
+                  Contact us
+                </Link>
               </div>
             </div>
 
@@ -236,9 +254,12 @@ export default function Header() {
                   </span>
                 </div>
               </a>
-              <button className="hidden md:block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+              <Link
+                href="/book"
+                className="hidden md:block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              >
                 Book Repair
-              </button>
+              </Link>
             </div>
           </div>
 

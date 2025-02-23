@@ -1,3 +1,93 @@
+// booking device data ->
+import { Device, Brand as Brands, Model, RepairService } from "../types";
+import {
+  Smartphone,
+  Laptop,
+  Tablet,
+  Camera,
+  Airplay as Display,
+  Battery,
+  Wifi,
+  Speaker,
+} from "lucide-react";
+
+export const devices: Device[] = [
+  { id: "smartphone", name: "Smartphone", icon: "Smartphone" },
+  { id: "laptop", name: "Laptop", icon: "Laptop" },
+  { id: "tablet", name: "Tablet", icon: "Tablet" },
+];
+
+export const brand: Brands[] = [
+  {
+    id: "apple",
+    name: "Apple",
+    logo: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=200&q=80",
+  },
+  {
+    id: "samsung",
+    name: "Samsung",
+    logo: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=200&q=80",
+  },
+  {
+    id: "google",
+    name: "Google",
+    logo: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=200&q=80",
+  },
+];
+
+export const models: Model[] = [
+  {
+    id: "iphone-14",
+    brandId: "apple",
+    name: "iPhone 14",
+    image:
+      "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?w=200&q=80",
+  },
+  {
+    id: "iphone-13",
+    brandId: "apple",
+    name: "iPhone 13",
+    image:
+      "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=200&q=80",
+  },
+  {
+    id: "s23",
+    brandId: "samsung",
+    name: "Galaxy S23",
+    image:
+      "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?w=200&q=80",
+  },
+];
+
+export const repairServices: RepairService[] = [
+  {
+    id: "screen",
+    name: "Screen Replacement",
+    price: 149.99,
+    description: "Replace damaged or cracked screen",
+  },
+  {
+    id: "battery",
+    name: "Battery Replacement",
+    price: 79.99,
+    description: "Replace old or failing battery",
+  },
+  {
+    id: "camera",
+    name: "Camera Repair",
+    price: 99.99,
+    description: "Fix camera issues or replace camera module",
+  },
+  {
+    id: "speaker",
+    name: "Speaker Repair",
+    price: 69.99,
+    description: "Fix audio issues or replace speaker",
+  },
+];
+
+// //////////////////////////////////////////////
+
 interface Brand {
   name: string;
   logo: string;
