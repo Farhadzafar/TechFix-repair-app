@@ -4,13 +4,10 @@ import {
   PenTool as Tool,
   Search,
   Star,
-  Phone,
   Computer,
   Tablet,
-  LampDesk,
   LucideWatch,
-  PhoneCall,
-  LucidePhone,
+  Smartphone,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -20,9 +17,9 @@ export function HeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <section className="relative min-h-[90vh] flex items-center hero-pattern">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/90" />
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2070')] bg-cover bg-center mix-blend-overlay opacity-20" />
+    <section className="relative min-h-[90vh] flex items-center hero-pattern bg-black">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/40 to-blue-300/30" />
+      <div className="absolute inset-0 bg-[url('https://media.istockphoto.com/id/862208682/photo/technician-plug-in-microprocessor-to-motherboard.jpg?s=612x612&w=0&k=20&c=MX8qbuTejh7yeMp2mWLsWbY5OfMYC1yTtdRju5gYPuo=')] bg-cover bg-center mix-blend-overlay opacity-20" />
       <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* <div className="animate-float mb-8">
@@ -81,7 +78,7 @@ export function HeroSection() {
               variant="outline"
               className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white"
             >
-              <LucidePhone className="mr-2 h-5 w-5" />
+              <Smartphone className="mr-2 h-5 w-5" />
               Phone
             </Button>
             <Button
