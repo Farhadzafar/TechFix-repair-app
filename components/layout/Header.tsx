@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { SearchButton } from "./SearchButton";
+import { usePathname } from "next/navigation";
 const repairServices = [
   {
     category: "Mobile Devices",
@@ -107,6 +108,8 @@ const repairServices = [
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const pathName = usePathname();
+  console.log(pathName, "pathName");
 
   return (
     <>
@@ -144,7 +147,7 @@ export default function Header() {
                     className="flex items-center text-gray-600 hover:text-blue-600 space-x-1"
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
                   >
-                    <span>Repair Services</span>
+                    <span className="font-semibold">Repair Services</span>
                     <svg
                       className={`w-4 h-4 transition-transform ${
                         isServicesOpen ? "rotate-180" : ""
@@ -182,9 +185,10 @@ export default function Header() {
                           </h3>
                           <div className="space-y-4">
                             {category.items.map((item, itemIdx) => (
-                              <a
+                              <Link
                                 key={itemIdx}
-                                href={`#${item.name.toLowerCase()}`}
+                                href="/book"
+                                // href={`#${item.name.toLowerCase()}`}
                                 className="flex items-start space-x-3 group/item"
                               >
                                 <div className="p-2 rounded-lg bg-gray-50 group-hover/item:bg-blue-50 group-hover/item:text-blue-600 transition-colors">
@@ -198,7 +202,7 @@ export default function Header() {
                                     {item.description}
                                   </p>
                                 </div>
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         </div>
@@ -209,25 +213,33 @@ export default function Header() {
 
                 <Link
                   href="/service"
-                  className="text-gray-600 hover:text-blue-600"
+                  className={` hover:text-blue-600 font-semibold ${
+                    pathName === "/service" ? "text-blue-600" : "text-gray-600"
+                  }`}
                 >
                   Services
                 </Link>
                 <Link
                   href="/brands"
-                  className="text-gray-600 hover:text-blue-600"
+                  className={`font-semibold hover:text-blue-600 ${
+                    pathName === "/brands" ? "text-blue-600" : "text-gray-600"
+                  }`}
                 >
                   Brands
                 </Link>
                 <Link
                   href="/about"
-                  className="text-gray-600 hover:text-blue-600"
+                  className={`font-semibold hover:text-blue-600 ${
+                    pathName === "/about" ? "text-blue-600" : "text-gray-600"
+                  }`}
                 >
                   About us
                 </Link>
                 <Link
-                  href="/brands"
-                  className="text-gray-600 hover:text-blue-600"
+                  href="/contact"
+                  className={`hover:text-blue-600 font-semibold ${
+                    pathName === "/contact" ? "text-blue-600" : "text-gray-600"
+                  }`}
                 >
                   Contact us
                 </Link>
