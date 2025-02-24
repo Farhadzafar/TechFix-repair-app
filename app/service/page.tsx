@@ -21,6 +21,7 @@ import {
   Wifi,
   Star,
 } from "lucide-react";
+import Link from "next/link";
 
 const categories = [
   {
@@ -255,9 +256,12 @@ export default function Service() {
                           <Clock className="w-5 h-5 mr-2 text-blue-600" />
                           {service.time}
                         </div>
-                        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        <Link
+                          href="/book"
+                          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                        >
                           Book Now
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </div>

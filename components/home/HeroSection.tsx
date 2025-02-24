@@ -1,6 +1,17 @@
 "use client";
 
-import { PenTool as Tool, Search, Star } from "lucide-react";
+import {
+  PenTool as Tool,
+  Search,
+  Star,
+  Phone,
+  Computer,
+  Tablet,
+  LampDesk,
+  LucideWatch,
+  PhoneCall,
+  LucidePhone,
+} from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -45,7 +56,7 @@ export function HeroSection() {
             </div>
           </div> */}
 
-          <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
+          {/* <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
             <StatsCard value="50K+" label="Repairs Done" />
             <StatsCard
               value="4.9"
@@ -63,6 +74,37 @@ export function HeroSection() {
             />
             <StatsCard value="90d" label="Warranty" />
             <StatsCard value="15m" label="Response Time" />
+          </div> */}
+          {/* Quick Access Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <Button
+              variant="outline"
+              className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white"
+            >
+              <LucidePhone className="mr-2 h-5 w-5" />
+              Phone
+            </Button>
+            <Button
+              variant="outline"
+              className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white"
+            >
+              <Computer className="mr-2 h-5 w-5" />
+              Laptop
+            </Button>
+            <Button
+              variant="outline"
+              className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white"
+            >
+              <Tablet className="mr-2 h-5 w-5" />
+              Tablet
+            </Button>
+            <Button
+              variant="outline"
+              className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white"
+            >
+              <LucideWatch className="mr-2 h-5 w-5" />
+              Smartwatch
+            </Button>
           </div>
         </div>
       </div>
